@@ -4,10 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARTWEY | Головна</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2c3e50; min-height: 100vh; line-height: 1.6;
+            background-color: #f3f7f9;
+            background-image:
+                radial-gradient(at 15% 15%, rgba(66, 153, 225, 0.18) 0px, transparent 45%),
+                radial-gradient(at 85% 20%, rgba(237, 137, 54, 0.12) 0px, transparent 45%),
+                radial-gradient(at 50% 85%, rgba(43, 108, 176, 0.15) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        .card-glass {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+        }
+        .navbar { display: flex; justify-content: space-between; align-items: center; margin: 20px auto; padding: 15px 30px; max-width: 1100px; }
+        .logo { font-size: 24px; font-weight: 800; letter-spacing: 2px; color: #1a365d; }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { text-decoration: none; color: #4a5568; font-weight: 600; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: #2b6cb0; }
+        .hero { padding: 60px; text-align: center; }
+        .hero h1 { font-size: 56px; letter-spacing: 4px; color: #1a365d; margin-bottom: 10px; }
+        .subtitle { font-size: 18px; color: #718096; margin-bottom: 40px; font-style: italic; }
+        .project-info { text-align: left; max-width: 700px; margin: 0 auto 40px auto; }
+        .project-info h3 { margin-top: 20px; color: #2c5282; }
+        .btn-start { display: inline-block; padding: 12px 30px; background: #2b6cb0; color: white; text-decoration: none; font-weight: 600; border-radius: 30px; transition: background 0.3s, transform 0.2s; }
+        .btn-start:hover { background: #2c5282; transform: translateY(-2px); }
+
+        @media (max-width: 768px) {
+            .navbar { flex-direction: column; gap: 15px; padding: 15px; }
+            .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .container { margin: 15px auto; padding: 0 10px; }
+            .hero { padding: 30px 20px; }
+            .hero h1 { font-size: 38px; }
+        }
+    </style>
 </head>
 <body>
-
     <header>
         <nav class="navbar card-glass">
             <div class="logo">ARTWEY</div>
@@ -20,23 +58,18 @@
             </ul>
         </nav>
     </header>
-
     <main class="container">
         <section class="hero card-glass">
             <h1>ARTWEY</h1>
             <p class="subtitle">Тип сайту: Інформаційний / персональний</p>
-
             <div class="project-info">
                 <h3>Тема сайту:</h3>
                 <p>Сайт про дизайн, малювання та розвиток творчих навичок.</p>
-
                 <h3>Мета проєкту:</h3>
                 <p>Щоб допомагати учням розвивати креативність, вчитись дизайну та надихатись новими ідеями.</p>
             </div>
-
             <a href="lessons.html" class="btn-start">Почати навчання →</a>
         </section>
     </main>
-
 </body>
 </html>

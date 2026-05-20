@@ -4,10 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARTWEY | Уроки</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2c3e50; min-height: 100vh; line-height: 1.6;
+            background-color: #f3f7f9;
+            background-image:
+                radial-gradient(at 15% 15%, rgba(66, 153, 225, 0.18) 0px, transparent 45%),
+                radial-gradient(at 85% 20%, rgba(237, 137, 54, 0.12) 0px, transparent 45%),
+                radial-gradient(at 50% 85%, rgba(43, 108, 176, 0.15) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        .card-glass {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+        }
+        .navbar { display: flex; justify-content: space-between; align-items: center; margin: 20px auto; padding: 15px 30px; max-width: 1100px; }
+        .logo { font-size: 24px; font-weight: 800; letter-spacing: 2px; color: #1a365d; }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { text-decoration: none; color: #4a5568; font-weight: 600; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: #2b6cb0; }
+        .section-title { font-size: 32px; color: #1a365d; margin-bottom: 30px; }
+        .lessons-list { display: flex; flex-direction: column; gap: 15px; }
+        .lesson-card { display: flex; align-items: center; padding: 20px 30px; gap: 25px; }
+        .step-num { font-size: 28px; font-weight: bold; color: #dd6b20; min-width: 50px; }
+        .lesson-card h3 { min-width: 200px; color: #2c5282; }
+
+        @media (max-width: 768px) {
+            .navbar { flex-direction: column; gap: 15px; padding: 15px; }
+            .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .container { margin: 15px auto; padding: 0 10px; }
+            .lesson-card { flex-direction: column; align-items: flex-start; gap: 10px; padding: 20px; }
+            .lesson-card h3 { min-width: auto; }
+            .section-title { font-size: 26px; margin-bottom: 20px; }
+        }
+    </style>
 </head>
 <body>
-
     <header>
         <nav class="navbar card-glass">
             <div class="logo">ARTWEY</div>
@@ -20,36 +57,30 @@
             </ul>
         </nav>
     </header>
-
     <main class="container">
         <section class="lessons-section">
             <h2 class="section-title">02. Програма навчання</h2>
-
             <div class="lessons-list">
                 <div class="lesson-card card-glass">
                     <span class="step-num">01</span>
                     <h3>Головна сторінка</h3>
                     <p>Короткий опис сайту, привітання, кнопка «Почати навчання».</p>
                 </div>
-
                 <div class="lesson-card card-glass">
                     <span class="step-num">02</span>
                     <h3>Уроки</h3>
                     <p>Прості уроки з малювання і дизайну, покрокові інструкції.</p>
                 </div>
-
                 <div class="lesson-card card-glass">
                     <span class="step-num">03</span>
                     <h3>Галерея</h3>
                     <p>Приклади робіт, малюнки, дизайн-проєкти.</p>
                 </div>
-
                 <div class="lesson-card card-glass">
                     <span class="step-num">04</span>
                     <h3>Поради</h3>
                     <p>Поради як розвивати креативність, як тренувати уяву.</p>
                 </div>
-
                 <div class="lesson-card card-glass">
                     <span class="step-num">05</span>
                     <h3>Про автора</h3>
@@ -58,6 +89,5 @@
             </div>
         </section>
     </main>
-
 </body>
 </html>
