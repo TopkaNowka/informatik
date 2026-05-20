@@ -1,4 +1,4 @@
-/* Базові налаштування */
+/* Загальні стилі */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,7 +11,7 @@ body {
     min-height: 100vh;
     line-height: 1.6;
 
-    /* Градієнтний фон у стилі презентації */
+    /* Фон-градієнт */
     background-color: #f3f7f9;
     background-image:
     radial-gradient(at 15% 15%, rgba(66, 153, 225, 0.18) 0px, transparent 45%),
@@ -26,7 +26,7 @@ body {
     padding: 0 20px;
 }
 
-/* Ефект матового скла (Glassmorphism) */
+/* Ефект матового скла */
 .card-glass {
     background: rgba(255, 255, 255, 0.45);
     backdrop-filter: blur(12px);
@@ -36,14 +36,13 @@ body {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
 }
 
-/* Навігаційна панель */
+/* Навігація */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px auto;
     padding: 15px 30px;
-    max-width: 1100px;
 }
 
 .logo {
@@ -70,165 +69,82 @@ body {
     color: #2b6cb0;
 }
 
-/* Головний екран (Hero) */
-.hero {
-    padding: 60px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 56px;
-    letter-spacing: 4px;
-    color: #1a365d;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    font-size: 18px;
-    color: #718096;
-    margin-bottom: 40px;
-    font-style: italic;
-}
-
-.project-info {
-    text-align: left;
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-}
-
-.project-info h3 {
-    margin-top: 20px;
-    color: #2c5282;
-}
-
-.btn-start {
-    display: inline-block;
-    padding: 12px 30px;
-    background: #2b6cb0;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 30px;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.btn-start:hover {
-    background: #2c5282;
-    transform: translateY(-2px);
-}
-
-/* Сторінка уроків */
+/* Заголовки */
 .section-title {
     font-size: 32px;
     color: #1a365d;
     margin-bottom: 30px;
 }
 
-.lessons-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.lesson-card {
-    display: flex;
-    align-items: center;
-    padding: 20px 30px;
-    gap: 25px;
-}
-
-.step-num {
-    font-size: 28px;
-    font-weight: bold;
-    color: #dd6b20;
-    min-width: 50px;
-}
-
-.lesson-card h3 {
-    min-width: 200px;
-    color: #2c5282;
-}
-
-/* Сторінка Галереї */
+/* СІТКА ГАЛЕРЕЇ */
 .inspiration-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 30px;
 }
 
 .inspiration-card {
-    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-.inspiration-card h3 {
-    font-size: 24px;
+.card-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    padding: 20px;
+}
+
+.card-text h3 {
     color: #2b6cb0;
-    margin-bottom: 15px;
-    border-bottom: 2px solid rgba(43, 108, 176, 0.2);
-    padding-bottom: 5px;
+    margin-bottom: 8px;
 }
 
-.inspiration-card ul {
-    list-style-type: none;
-}
-
-.inspiration-card li {
-    margin-bottom: 10px;
-}
-
-/* Стилі для сторінки Поради */
-.tips-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.tip-card {
-    padding: 25px;
-    text-align: left;
-}
-
-.tip-icon {
-    font-size: 32px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.tip-card h3 {
-    color: #2c5282;
-    margin-bottom: 10px;
-}
-
-/* Стилі для сторінки Про автора */
+/* СТОРІНКА ПРО МЕНЕ */
 .about-section {
-    padding: 50px;
-    text-align: left;
+    padding: 40px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 .author-name {
-    font-size: 20px;
+    font-size: 18px;
     color: #dd6b20;
     font-weight: 600;
-    margin-top: -20px;
-    margin-bottom: 30px;
-}
-
-.about-content {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
+    margin-bottom: 15px;
 }
 
 .about-text p {
-    margin-bottom: 20px;
-    font-size: 17px;
+    margin-bottom: 15px;
     color: #4a5568;
 }
 
 .skills-block h3 {
     color: #1a365d;
-    margin-bottom: 15px;
+    margin: 20px 0 10px 0;
 }
 
 .skills-list {
@@ -236,50 +152,32 @@ body {
 }
 
 .skills-list li {
-    padding: 8px 12px;
-    background: rgba(255, 255, 255, 0.5);
-    margin-bottom: 8px;
-    border-radius: 8px;
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.6);
+    margin: 0 8px 8px 0;
+    border-radius: 20px;
     font-weight: 500;
+    font-size: 14px;
     color: #2c5282;
+    border: 1px solid rgba(255,255,255,0.8);
 }
 
-/* Мобільна адаптивність (Фікс для екрана телефона) */
+/* Адаптивність під мобільні */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         gap: 15px;
-        padding: 15px;
     }
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
     }
-    .container {
-        margin: 15px auto;
-        padding: 0 10px;
-    }
-    .hero, .about-section {
-        padding: 20px;
-    }
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    /* НАЛАШТУВАННЯ ДЛЯ УРОКІВ НА ТЕЛЕФОНІ */
-    .lesson-card {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        padding: 20px;
-    }
-    .lesson-card h3 {
-        min-width: auto;
-    }
-
-    .about-content, .inspiration-grid {
+    .inspiration-grid, .about-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+    }
+    .about-photo {
+        max-width: 260px;
+        margin: 0 auto;
     }
 }
